@@ -1,7 +1,8 @@
 
 from urllib2 import urlopen
 import json
-from jsonpath_rw import jsonpath, parse
+#import jsonpath
+import jsonpath
 
 
 class client:
@@ -10,15 +11,9 @@ class client:
         url = "https://api.myjson.com/bins/1leee"
         response = urlopen(url)
         data = response.read()
-        jsonexpression =parse("$..glossary")
-        dataarray=[match.value for match in jsonexpression.find(data)]
-        #dataarray=jsonexpression.find(data);
-        #print dataarray
-        dataparse=[match.value for match in parse('foo[*].id').find({'foo': [{'id': 'bizzle'}, {'baz': 3}]})]
-        print dataparse
-
-        #print data
-
+        somejson = json.loads(data)
+        match = jsonpath.jsonpath(somejson, '$..title')
+        print match
 
 ob = client()
 ob.getresponse()
