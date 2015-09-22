@@ -1,6 +1,6 @@
 import re
 
-line ="once you have accomplished small thing succefully and you may start greatone succufully"
+line ="once you have accomplished small thing succefully and you may 122 333 start greatone succufully"
 
 obj = re.match(r'.*',line, re.I|re.M)
 print obj.group()
@@ -18,3 +18,9 @@ for match in it:
 
 print "*****************************************"
 print re.split("\W+",line);
+
+
+if(re.search("small",line)):
+    print "search is sucessfully"
+
+print re.sub("\d","",line)
