@@ -28,4 +28,9 @@ enstr=str1.encode('base64','strict') # encodeed string =(encode type ,mode)
 print enstr
 print enstr.decode('base64','strict') #decoded string =(endcode type ,mode )
 
-print str1.endwith('da',0,22) # yes/no =(string must  end with,string start from ,string end with  ) 
+print str1.endswith('da',0,22)  # yes/no =(string must  end with,string start from ,string end with  )
+print str1.find('na',0) #index of element =(string to find ,start index ,end index ) if not find return s -1
+print "123a".isalnum() # yes/no =if all member is number at least one
+print "abca".isalpha() #yes/no =if all member is alphabate no numeric shoud be there
+print "123".isdigit() # check for digit
+print "abcd".islower()
