@@ -32,3 +32,15 @@ dic2 ={'add':'kol'}
 dic.update(dic2)
 print "after update ", dic
 print "getting value " ,dic.values()
+
+
+print "inverting "
+
+
+m ={'a':1,'b':2,'c':3}
+
+print m.items()
+
+print
+
+mi = dict(zip(m.values(),m.keys()))
