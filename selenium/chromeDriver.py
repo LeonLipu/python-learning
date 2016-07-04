@@ -7,6 +7,13 @@ driver=webdriver.Chrome(ChromeDriver)
 driver.get("http://www.google.com")
 driver.close()
 
+print driver.current_url+"this is pthon tutorial spource "       
+
+
+
+
+
+
 
 # import os
 # from selenium import webdriver
